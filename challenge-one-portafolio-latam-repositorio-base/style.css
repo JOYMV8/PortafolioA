@@ -1,0 +1,664 @@
+/* Este repositorio base fue creado para ayudarte en caso que no sepas cómo comenzar. 
+Recuerda que el portafolio es tu carta de presentación y debes darle tu cara, 
+por eso te invitamos a personalizarlo según tu estilo y preferencias. 
+No te limites apenas al layout propuesto en Figma. 
+*/
+
+/* ------------------------------ Variables de colores -------------------------------*/
+/* Define variables para mantener consistencia en los colores */
+:root {
+    --color-de-fondo: #F5F5F5;
+    --color-de-fondo-menu: #ffffff;
+    --color-de-link: #000000;
+}
+
+/* ------------------------------ Configuración General -------------------------------*/
+/* Configuración base para el cuerpo de la página */
+body {
+    background-color: var(--color-de-fondo);
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Eliminación de estilos predeterminados en listas */
+ol, ul, li {
+    list-style: none;
+}
+
+/* Configuración básica para enlaces */
+a {
+    text-decoration: none;
+    color: var(--color-de-link);
+}
+
+/* ------------------------------ Sección Menú -------------------------------*/
+/* Configuración general del menú */
+.cabecera {
+    display: flex;
+    flex-direction: row; /*Esto hace que todos los elementos del menu estén alineados horizontalmente*/
+    justify-content: space-between; /*Separa los elentos imagen título y más con un espacio*/
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--color-de-fondo-menu);
+}
+
+/* Configuración para el logo */
+.cabecera__logo {
+    max-width: 80px; /* Ajuste para pantallas pequeñas */
+    height: auto; /*Proporción Ayuda a ajustar el tamaño según el espacio disponible*/
+}
+
+/* Configuración para el título de la cabecera */
+.cabecera__titulo {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/* Contenedor del menú */
+.navegacion__lista {
+    display: flex; /* Hace visible el contenedor */
+    justify-content: space-between;
+    gap: 1rem; /* Espaciado entre los elementos */
+    margin: 0;
+    padding: 0;
+}
+
+/* Oculta todos los elementos del menú por defecto */
+.navegacion__elemento {
+    display: none; /* Todos los elementos están ocultos inicialmente */
+}
+
+/* Muestra solo el elemento "Contacto" */
+.navegacion__elemento:nth-child(6) {
+    display: block; /* El sexto elemento (Contacto) será visible */
+}
+
+/* ------------------------------ Sección Presentación ------------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección de presentación */
+
+/* Contenedor principal de la sección */
+/* Contenedor principal de la sección */
+.presentacion {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Por defecto, apila los elementos verticalmente */
+    align-items: center; /* Alinea los elementos al centro */
+    gap: 1rem; /* Espaciado entre imagen, texto y redes */
+    padding: 2rem;
+}
+
+/* Imagen de presentación */
+.presentacion__foto {
+    max-width: 100%; /* Asegura que la imagen se ajuste en pantallas pequeñas */
+    height: auto; /* Mantiene la proporción */
+    border-radius: 50%; /* Hace la imagen redonda, opcional */
+}
+
+/* Contenedor del texto */
+.presentacion__contenedor {
+    text-align: center; /* Centra el texto para pantallas pequeñas */
+    display: flex; /* Permite alinear las redes sociales dentro */
+    flex-direction: column; /* Apila los elementos (título, subtítulo, redes) */
+    gap: 1rem; /* Espaciado entre los elementos */
+    align-items: left;
+}
+
+/* Estilos para el título y subtítulo */
+.presentacion__titulo {
+    font-size: 1.8rem; /* Tamaño del título */
+    font-weight: bold; /* Destaca el título */
+    margin: 0;
+}
+
+.presentacion__subtitulo {
+    font-size: 1rem; /* Tamaño del subtítulo */
+    margin: 0;
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Redes sociales */
+
+.redes {
+    display: flex; /* Activa Flexbox */
+    flex-direction: row; /* Mantiene los íconos en una fila */
+    align-items: center; /* Alinea verticalmente los elementos */
+    justify-content: center; /* Centra las redes sociales */
+    gap: 1rem; /* Espaciado entre cada ícono */
+    width: 100%;
+}
+
+/* Elementos individuales de las redes sociales */
+.redes__img {
+    display: flex; /* Activa Flexbox dentro de cada enlace */
+    align-items: center; /* Alinea texto y flecha verticalmente */
+    gap: 0.5rem; /* Espaciado entre texto y flecha */
+}
+
+/* Enlaces de redes sociales */
+.redes__img a {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: inherit; /* Mantiene el color del texto según el diseño */
+    font-size: 1rem; /* Ajusta el tamaño del texto según el ancho de la pantalla */
+    display: flex; /* Activa Flexbox dentro del enlace */
+    align-items: center; /* Asegura que la flecha esté alineada */
+}
+
+/* Flechas */
+.redes__img img {
+    max-width: 1rem; /* Tamaño de la flecha */
+    height: auto; /* Mantiene la proporción */
+}
+
+/* ------------------------------ Sección sobre mí ----------------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección "Sobre mí" */
+
+/* Contenedor principal de la sección "Sobre mí" */
+.sobre-mi {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Por defecto, apila los elementos verticalmente */
+    gap: 1.5rem; /* Espaciado entre los elementos */
+    padding: 2rem;
+    align-items: flex-start; /* Alinea los elementos al inicio horizontalmente */
+}
+
+/* Redes sociales alineadas con el texto */
+.sobre-mi__contenedor {
+    display: flex; /* Activa Flexbox */
+    flex-direction: row; /* Alinea los elementos horizontalmente */
+    justify-content: space-between; /* Espacio entre texto y redes */
+    align-items: center; /* Alinea verticalmente el texto y las redes */
+    width: 100%; /* Asegura que ocupe todo el ancho del contenedor */
+}
+
+/* Estilo del texto */
+.sobre-mi__texto {
+    flex: 1; /* Ocupa el espacio restante */
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+.boton-cv {
+    display: inline-block; /* Hace que el botón sea un bloque en línea */
+    margin-top: 1rem; /* Espaciado superior */
+    padding: 0.8rem 1.5rem; /* Espaciado interno */
+    background-color: #000; /* Color de fondo del botón */
+    color: #fff; /* Color del texto */
+    text-decoration: none; /* Elimina el subrayado */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.boton-cv:hover {
+    background-color: #0056b3; /* Cambia el color al pasar el mouse */
+}
+/* ------------------------------ Sección de Habilidades ----------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección de habilidades */
+/* Título de la sección Habilidades */
+.habilidades__titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Aplica negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Contenedor principal de la lista de habilidades */
+.habilidades__lista {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas */
+    gap: 1rem; /* Espaciado entre los cuadros */
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    padding: 2rem; /* Espaciado interno para el contenedor */
+}
+
+/* Cuadros individuales para cada habilidad */
+.habilidades__elemento {
+    display: flex; /* Activa Flexbox para alinear contenido interno */
+    flex-direction: column; /* Alinea el icono y el texto verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    flex-grow: 1; /* Permite que los cuadros crezcan proporcionalmente */
+    flex-shrink: 1; /* Permite que los cuadros se reduzcan proporcionalmente */
+    flex-basis: calc(33.33% - 1rem); /* Tamaño base del cuadro (tres por fila) */
+    height: 150px; /* Altura fija de los cuadros */
+    max-width: 300px; /* Ancho máximo para cada cuadro */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde para visualización */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.habilidades__elemento:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
+}
+
+/* Iconos dentro del cuadro */
+.habilidades__icono {
+    width: 50px; /* Tamaño del icono */
+    height: auto; /* Mantiene proporción */
+    margin-bottom: 0.5rem; /* Espaciado entre el icono y el texto */
+}
+
+/* Texto dentro del cuadro */
+.habilidades__nombre {
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+
+
+/* ------------------------------ Sección de Aficiones ------------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección de aficiones */
+
+
+/* Título de la sección Aficiones */
+.aficiones__titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Aplica negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Contenedor principal de la lista de aficiones */
+.aficiones__lista {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los cuadros se ajusten en múltiples filas */
+    gap: 1rem; /* Espaciado entre los cuadros */
+    justify-content: center; /* Centra los elementos dentro del contenedor */
+    padding: 2rem; /* Espaciado interno para el contenedor */
+}
+
+/* Cuadros individuales para cada afición */
+.aficiones__elemento {
+    display: flex; /* Activa Flexbox para alinear contenido interno */
+    flex-direction: column; /* Alinea el icono y el texto verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: center; /* Centra el contenido verticalmente */
+    flex-grow: 1; /* Permite que los cuadros crezcan proporcionalmente */
+    flex-shrink: 1; /* Permite que los cuadros se reduzcan proporcionalmente */
+    flex-basis: calc(33.33% - 1rem); /* Tamaño base del cuadro (tres por fila) */
+    height: 150px; /* Altura fija de los cuadros */
+    max-width: 300px; /* Ancho máximo para cada cuadro */
+    background-color: #fff; /* Fondo blanco */
+    border: 1px solid #ccc; /* Borde para visualización */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional */
+    padding: 1rem; /* Espaciado interno */
+    text-align: center; /* Centra el texto dentro del cuadro */
+    transition: transform 0.3s ease; /* Animación al pasar el mouse */
+}
+
+.aficiones__elemento:hover {
+    transform: scale(1.05); /* Efecto de ampliación al pasar el mouse */
+}
+
+/* Iconos dentro del cuadro */
+.aficiones__icono {
+    width: 50px; /* Tamaño del icono */
+    height: auto; /* Mantiene proporción */
+    margin-bottom: 0.5rem; /* Espaciado entre el icono y el texto */
+}
+
+/* Texto dentro del cuadro */
+.aficiones__nombre {
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+/* ------------------------------ Sección de Formación académica ---------------------------------------*/
+/* Contenedor principal de la sección "Formación académica" */
+/* Título de la sección Formación académica */
+
+.formacion {
+    background-color: #eaf2fd; /* Color de fondo */
+    padding: 2rem; /* Espaciado interno opcional */
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    box-sizing: border-box; /* Incluye relleno y borde en el ancho total */
+}
+
+.formacion__titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Aplica negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+    
+    
+}
+
+.formacion__lista {
+    display: flex; /* Activa Flexbox */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en múltiples filas si no caben */
+    gap: 1rem; /* Espaciado entre las tarjetas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    align-items: stretch; /* Asegura que las tarjetas tengan la misma altura */
+    padding: 2rem; /* Espaciado interno */
+    background-color: #eaf2fd; /* Color de fondo para la sección */
+}
+
+/* Tarjetas individuales de formación académica */
+.formacion__elemento {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    justify-content: space-between; /* Espacia el contenido dentro de la tarjeta */
+    flex-basis: calc(33.33% - 1rem); /* Ancho inicial de cada tarjeta (tres por fila) */
+    flex-grow: 1; /* Permite que las tarjetas crezcan proporcionalmente */
+    flex-shrink: 1; /* Permite que las tarjetas se reduzcan proporcionalmente */
+    max-width: 300px; /* Ancho máximo para cada tarjeta */
+    background-color: #ffffff; /* Fondo blanco para las tarjetas */
+    border: 1px solid #ccccccf1; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1.5rem; /* Espaciado interno */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    text-align: center; /* Centra el texto dentro de la tarjeta */
+}
+
+/* Imagen dentro de la tarjeta */
+.formacion__icono {
+    max-width: 100px; /* Ancho máximo de la imagen */
+    height: auto; /* Mantiene la proporción */
+    margin-bottom: 1rem; /* Espaciado debajo de la imagen */
+}
+
+/* Título de la tarjeta */
+.formacion__nombre {
+    font-size: 1.2rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    color: #333; /* Color del texto */
+    margin: 0.5rem 0; /* Espaciado superior e inferior */
+}
+
+/* Descripción dentro de la tarjeta */
+.formacion__detalle {
+    font-size: 0.9rem; /* Tamaño del texto de la descripción */
+    color: #666; /* Color gris para el texto */
+    margin: 0; /* Elimina márgenes adicionales */
+}
+
+
+/* ------------------------------ Sección de Proyectos ------------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección de proyectos */
+
+/* Contenedor principal de la sección de proyectos */
+.proyectos {
+    padding: 2rem;
+    background-color: #f5f5f5; /* Color de fondo */
+}
+
+/* Contenedor de cada proyecto */
+.proyectos__item {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    background-color: #fff; /* Fondo blanco para cada proyecto */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-bottom: 2rem; /* Espaciado entre proyectos */
+    max-width: 900px; /* Ancho máximo del proyecto */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Imagen del proyecto */
+.proyectos__imagen {
+    max-width: 100%; /* Asegura que la imagen se ajuste al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Título del proyecto */
+.proyectos__titulo {
+    text-align: center; /* Centra el texto horizontalmente */
+    font-size: 2rem; /* Ajusta el tamaño del texto */
+    font-weight: bold; /* Aplica negrita */
+    color: #333; /* Color del texto */
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Descripción del proyecto */
+.proyectos__descripcion {
+    font-size: 1rem; /* Tamaño del texto */
+    color: #666; /* Color gris */
+    text-align: center;
+    margin-bottom: 1rem; /* Espaciado inferior */
+}
+
+/* Contenedor de botones */
+.proyectos__botones {
+    display: flex; /* Activa Flexbox */
+    justify-content: center; /* Centra los botones */
+    gap: 1rem; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones */
+.proyectos__boton {
+    padding: 0.8rem 1.5rem; /* Espaciado interno */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Elimina el borde */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Negrita */
+    cursor: pointer; /* Cambia el cursor a "pointer" */
+    text-decoration: none; /* Elimina el subrayado */
+    text-align: center; /* Centra el texto dentro del botón */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.proyectos__boton:hover {
+    background-color: #0056b3; /* Color al pasar el mouse */
+}
+
+/* ------------------------------ Sección de Contacto -------------------------------*/
+/* Aquí puedes agregar estilos específicos para la sección de contacto */
+/* Contenedor principal de la sección de contacto */
+
+.contacto {
+    padding: 2rem;
+    background-color: #eaf2fd; /* Color de fondo suave */
+    text-align: center; /* Centra el texto */
+}
+
+/* Título de la sección */
+.contacto__titulo {
+    text-align: left; /* Centra el texto horizontalmente */
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Descripción de la sección */
+.contacto__descripcion {
+    text-align: left; /* Centra el texto horizontalmente */
+    font-size: 2rem;
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Formulario de contacto */
+.contacto__formulario {
+    display: flex;
+    flex-direction: column; /* Apila los campos verticalmente */
+    gap: 1rem; /* Espaciado entre campos */
+    max-width: 600px; /* Ancho máximo del formulario */
+    margin: 0 auto; /* Centra el formulario horizontalmente */
+}
+
+/* Campos del formulario */
+.contacto__campo {
+    width: 100%; /* Ocupa todo el ancho del formulario */
+    padding: 0.8rem; /* Espaciado interno */
+    font-size: 1rem; /* Tamaño del texto */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: border-color 0.3s ease; /* Transición suave */
+}
+
+/* Estilo al hacer foco en los campos */
+.contacto__campo:focus {
+    border-color: #007bff; /* Cambia el color del borde al hacer foco */
+    outline: none; /* Elimina el contorno predeterminado */
+}
+
+/* Botón de enviar */
+.contacto__boton {
+    padding: 0.8rem 1.5rem; /* Espaciado interno */
+    background-color: #007bff; /* Color azul */
+    color: #fff; /* Texto blanco */
+    font-size: 1rem; /* Tamaño del texto */
+    font-weight: bold; /* Texto en negrita */
+    border: none; /* Elimina el borde */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    text-align: center; /* Centra el texto */
+    transition: background-color 0.3s ease; /* Transición suave */
+}
+
+/* Hover en el botón */
+.contacto__boton:hover {
+    background-color: #0056b3; /* Color azul oscuro al pasar el mouse */
+}
+
+
+/* ------------------------------ Rodapie---------------------------------------*/
+
+/* Estilo general para el rodapié */
+.rodapie {
+    display: flex; /* Activa Flexbox */
+    flex-direction: column; /* Alinea los elementos verticalmente */
+    align-items: center; /* Centra los elementos horizontalmente */
+    justify-content: center; /* Centra los elementos vertical y horizontalmente */
+    text-align: center; /* Centra el texto */
+    padding: 1.5rem; /* Espaciado interno */
+    background-color: #f0f4f8; /* Fondo suave */
+    color: #666; /* Color del texto */
+    font-size: 1rem; /* Tamaño de texto */
+}
+
+/* Lista de redes sociales en el rodapié */
+.rodapie__redes {
+    display: flex; /* Activa Flexbox */
+    flex-direction: row; /* Alinea las redes en una fila */
+    gap: 1rem; /* Espaciado entre los íconos o enlaces */
+    list-style: none; /* Elimina los estilos de lista */
+    padding: 0; /* Elimina el relleno interno */
+    margin: 1rem 0 0 0; /* Espaciado superior */
+}
+
+/* Enlaces de redes sociales */
+.rodapie__redes a {
+    text-decoration: none; /* Elimina el subrayado */
+    color: #007bff; /* Color azul para los enlaces */
+    font-size: 1rem; /* Tamaño del texto */
+    transition: color 0.3s ease; /* Transición suave al pasar el mouse */
+}
+
+/* Hover en los enlaces */
+.rodapie__redes a:hover {
+    color: #0056b3; /* Color azul oscuro al pasar el mouse */
+}
+
+
+
+
+
+/* ------------------------------ Responsividad ---------------------------------------*/
+/* Tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    /* Configuración de la cabecera para pantallas medianas */
+    .cabecera {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Ajuste del tamaño del logo */
+    .cabecera__logo {
+        max-width: 100px;
+    }
+
+    /* Ajuste del tamaño del título */
+    .cabecera__titulo {
+        font-size: 1.5rem;
+    }
+    .presentacion {
+        flex-direction: row; /* Alinea los elementos horizontalmente */
+        justify-content: space-between; /* Crea espacio entre texto e imagen */
+        align-items: center; /* Centra verticalmente */
+    }
+
+    .presentacion__foto {
+        max-width: 40%; /* Limita el tamaño de la imagen */
+        border-radius: 0; /* Elimina el borde redondo si no es necesario */
+        order: 2; /*Cambia el orden para que la foto este a la derecha*/
+    }
+
+    .presentacion__contenedor {
+        flex-direction: column; /* Alinea el título, subtítulo y redes horizontalmente */
+        align-items: center; /* Asegura que todos los elementos estén alineados verticalmente */
+        justify-content: space-between; /* Espacio uniforme entre título, subtítulo y redes */
+        text-align: left; /* Ajusta el texto a la izquierda */
+        gap: 2rem; 
+    }
+    .redes {
+        justify-content: flex-start; /* Alinea las redes al inicio */
+    }
+
+    .sobre-mi__contenedor {
+        flex-direction: column; /* Apila el texto y las redes verticalmente */
+        align-items: flex-start; /* Alinea al inicio horizontalmente */
+        gap: 1rem; /* Espaciado entre texto y redes */
+    }
+   
+ 
+}
+
+/* Pantallas grandes */
+@media (min-width: 1024px) {
+    /* Aquí puedes ajustar aún más el diseño para pantallas grandes */
+    .cabecera__titulo {
+        font-size: 1.8rem;
+    }
+
+    /* Hace visible el menú completo */
+    .navegacion__lista {
+        display: flex; /* Muestra el contenedor completo */
+    }
+
+    /* Muestra todos los elementos del menú */
+    .navegacion__elemento {
+        display: block; /* Todos los elementos están visibles */
+    }
+
+    /* Ajusta el tamaño de fuente para enlaces */
+    .navegacion__elemento a {
+        font-size: 1.1rem;
+    }
+}
+
+
+
+
+
